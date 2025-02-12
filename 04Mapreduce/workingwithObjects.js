@@ -1,5 +1,5 @@
 bookLibrary = {
-  books: [{ title: "The Alchemist", auther: "Paulo Coelho", yearOfPublish: 5 }],
+  books: [{ title: "As a man thinketh", auther: "Paulo Coelho", yearOfPublish: 5 }],
 };
 
 function addBook(book) {
@@ -20,12 +20,12 @@ function getAllbooks() {
 
 console.log(getAllbooks());
 console.log(getBooksByAuthor("Paulo Coelho"));
-console.log(removeBook("The Alchemist"));
+console.log(removeBook("As a man thinketh"));
 console.log(getAllbooks());
 console.log(
   addBook({
-    title: "how to code without code in coding ",
-    auther: "Yashodip",
+    title: "Think like a monk ",
+    auther: "jay shetty",
     yearOfPublish: 5,
   })
 );
