@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expense Tracker</title>
+</head>
+<body>
+  <h1>Expense Tracker</h1>
+  
+  <form id="expense-form">
+    <input type="number" id="amount" placeholder="Amount" required>
+    <select id="category" required>
+      <option value="">Select Category</option>
+      ${Object.values(Category).map(c => `<option value="${c}">${c}</option>`)}
+    </select>
+    <input type="date" id="date" required>
+    <input type="text" id="description" placeholder="Description" required>
+    <button type="submit">Add Expense</button>
+  </form>
+
+  <div>
+    <h2>Filters</h2>
+    <select id="category-filter">
+      <option value="">All Categories</option>
+      ${Object.values(Category).map(c => `<option value="${c}">${c}</option>`)}
+    </select>
+    <input type="date" id="date-filter">
+  </div>
+
+  <div id="expenses-list"></div>
+
+  <script src="index.js"></script>
+</body>
+</html>
