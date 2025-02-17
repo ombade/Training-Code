@@ -1,0 +1,68 @@
+/* FormComponent.css */
+
+.form-container {
+  width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.gender-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.gender-label {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.gender-option {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.textarea {
+  resize: none;
+  height: 80px;
+}
+
+.submit-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+}
