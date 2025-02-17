@@ -2,31 +2,135 @@
 <html>
 <head>
   <title>Expense Tracker</title>
+  <style>
+    :root {
+      --primary-color: #4a90e2;
+      --background-color: #f5f7fa;
+      --text-color: #2d3748;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: var(--primary-color);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    #expense-form {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    input, select, button {
+      padding: 10px;
+      border: 1px solid #e2e8f0;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #357abd;
+    }
+
+    .filter-section {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+
+    #expenses-list {
+      display: grid;
+      gap: 15px;
+    }
+
+    .expense-item {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .expense-item p {
+      margin: 5px 0;
+    }
+
+    .amount {
+      color: #2ecc71;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      #expense-form {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Expense Tracker</h1>
-  
-  <form id="expense-form">
-    <input type="number" id="amount" placeholder="Amount" required>
-    <select id="category" required>
-      <option value="">Select Category</option>
-      ${Object.values(Category).map(c => `<option value="${c}">${c}</option>`)}
-    </select>
-    <input type="date" id="date" required>
-    <input type="text" id="description" placeholder="Description" required>
-    <button type="submit">Add Expense</button>
-  </form>
+  <div class="container">
+    <h1>💰 Expense Tracker</h1>
+    
+    <form id="expense-form">
+      <input type="number" id="amount" placeholder="Amount" required>
+      <select id="category" required>
+        <option value="">Select Category</option>
+        <option value="Food">Food</option>
+        <option value="Travel">Travel</option>
+        <option value="Bills">Bills</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="date" id="date" required>
+      <input type="text" id="description" placeholder="Description" required>
+      <button type="submit">Add Expense</button>
+    </form>
 
-  <div>
-    <h2>Filters</h2>
-    <select id="category-filter">
-      <option value="">All Categories</option>
-      ${Object.values(Category).map(c => `<option value="${c}">${c}</option>`)}
-    </select>
-    <input type="date" id="date-filter">
+    <div class="filter-section">
+      <h2>🔍 Filters</h2>
+      <select id="category-filter">
+        <option value="">All Categories</option>
+        <option value="Food">Food</option>
+        <option value="Travel">Travel</option>
+        <option value="Bills">Bills</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="date" id="date-filter">
+    </div>
+
+    <div id="expenses-list"></div>
   </div>
-
-  <div id="expenses-list"></div>
 
   <script src="index.js"></script>
 </body>
