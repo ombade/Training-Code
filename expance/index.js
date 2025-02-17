@@ -18,7 +18,7 @@ var Category;
     Category["Shopping"] = "Shopping";
     Category["Other"] = "Other";
 })(Category || (Category = {}));
-// State Manager Class
+
 var ExpenseTracker = /** @class */ (function () {
     function ExpenseTracker() {
         this.expenses = this.loadFromLocalStorage();
