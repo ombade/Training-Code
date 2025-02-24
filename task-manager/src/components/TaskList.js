@@ -5,7 +5,7 @@ import TaskItem from './TaskItem';
 const TaskList = () => {
   const { state } = useTasks();
 
-  // Optimize completed task count using useMemo
+ 
   const completedTasksCount = useMemo(() => {
     return state.tasks.filter(task => task.completed).length;
   }, [state.tasks]);

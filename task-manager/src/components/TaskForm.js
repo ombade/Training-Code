@@ -7,7 +7,7 @@ const TaskForm = () => {
   const [taskText, setTaskText] = useState('');
   const { dispatch } = useTasks();
 
-  // Optimize addTask function using useCallback
+
   const addTask = useCallback(() => {
     if (taskText.trim()) {
       dispatch({ type: 'ADD_TASK', payload: taskText });

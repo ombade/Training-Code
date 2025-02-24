@@ -1,10 +1,10 @@
 import React, { useCallback } from 'react';
-import { useTasks } from '../context/TaskContext';
+import { useTasks } from '../context/ TaskContext';
 
 const TaskItem = ({ task }) => {
   const { dispatch } = useTasks();
 
-  // Optimize functions using useCallback
+
   const toggleTask = useCallback(() => {
     dispatch({ type: 'TOGGLE_TASK', payload: task.id });
   }, [dispatch, task.id]);
