@@ -32,7 +32,7 @@ const ProductPage: React.FC = () => {
         <Col md={8}>
           <Card className="shadow-lg p-4">
             <Row>
-              {/* Left Side - Product Image */}
+            
               <Col md={5} className="text-center">
                 <Card.Img
                   variant="top"
@@ -43,7 +43,7 @@ const ProductPage: React.FC = () => {
                 />
               </Col>
 
-              {/* Right Side - Product Info */}
+              
               <Col md={7}>
                 <Card.Body>
                   <Card.Title className="fw-bold text-primary fs-3">

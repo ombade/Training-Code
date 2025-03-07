@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const response = await fetch(`https://fakestoreapi.com/products/${productId}`);
         if (!response.ok) throw new Error("Failed to fetch product details");
         
-        const product: Product = await response.json();
+        const product = await response.json();
         
         const productDetails = document.getElementById("productDetails");
         if (!productDetails) return;

@@ -19,7 +19,7 @@ async function displayCart(): Promise<void> {
     let totalPrice = 0;
     cartContainer.innerHTML = "";
     
-    for (const productId of cart) {
+    for (const productId of cart) {  // no need to call in for loop
         try {
             const response = await fetch(`https://fakestoreapi.com/products/${productId}`);
             if (!response.ok) throw new Error("Failed to fetch product");
