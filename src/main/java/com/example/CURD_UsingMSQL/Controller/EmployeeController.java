@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Component
 @RestController
@@ -61,6 +62,20 @@ public class EmployeeController {
     @GetMapping("getdept/{dept}")
     public List<Employee> getEmployeebyDept(@PathVariable String dept )
     {
-        return empService.getEmployeesByDepartment(dept);
+        return empService.getEmployee().stream()
+                .filter(x -> !x.getIsDeleted() && dept.equals(x.getDepartment()))
+                .collect(Collectors.toList());
+
     }
+    @GetMapping("getsal/{sal}")
+    public List<Employee> findBySalaryGreaterThan(@PathVariable Double sal )
+    {
+        return empService.findBySalaryGreaterThan(sal);
+
+    }
+    @GetMapping("/search")
+    public List<Employee> searchEmployees(@RequestParam("name") String name) {
+        return empService.searchEmployeesByName(name);
+    }
+
 }

@@ -34,7 +34,7 @@ public class employeeService  {
 
     }
     public List<Employee> getEmployeesByDepartment(String department) {
-//        return repository.findAllByDepartmentAndisDeletedFalse(department);
+//        return repository.findByisDeletedFalseAndDepartment(department);
 return null;
     }
 
@@ -43,7 +43,7 @@ return null;
 
         if (optionalEmployee.isPresent()) {
             Employee employee = optionalEmployee.get();
-            employee.setIsDeleted(true); // Marking it as soft deleted
+            employee.setIsDeleted(true);
             repository.save(employee); // Saving the updated employee
             return true;
         }
@@ -66,5 +66,13 @@ public Optional<Employee> update(Long id, Employee updatedEmployee) {
         return repository.save(employee);
     });
 }
+public List<Employee> findBySalaryGreaterThan(Double sal)
+    {
+       return repository.findBySalaryGreaterThan(sal);
+    }
+
+    public List<Employee> searchEmployeesByName(String name) {
+        return repository.findByNameContainingIgnoreCase(name);
+    }
 
 }
