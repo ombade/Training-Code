@@ -34,7 +34,7 @@ public class employeeService  {
 
     }
     public List<Employee> getEmployeesByDepartment(String department) {
-//        return repository.findAllByDepartmentAndisDeletedFalse(department);
+//        return repository.findByisDeletedFalseAndDepartment(department);
 return null;
     }
 
