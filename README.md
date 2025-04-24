@@ -15,3 +15,11 @@
 
 # Get employees by department
 ![Screenshot From 2025-04-23 21-29-50](https://github.com/user-attachments/assets/407d4e3d-51fd-408d-ad1d-7c1247f380ad)
+
+
+#  Search employees by name(partial match)
+![Screenshot From 2025-04-24 17-04-17](https://github.com/user-attachments/assets/1a2b92c5-a3b6-4431-b87b-6c7009ad8d63)
+
+# Get employees with salary greater than a certain amount
+![Screenshot From 2025-04-24 16-57-26](https://github.com/user-attachments/assets/115e42f4-6965-4c12-a947-364393f18984)
+
