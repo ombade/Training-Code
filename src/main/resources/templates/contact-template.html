@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Contact Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffffff;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #2b2e4a;
+        }
+        p {
+            font-size: 16px;
+            color: #333333;
+        }
+        blockquote {
+            font-style: italic;
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-left: 5px solid #2b2e4a;
+            margin: 15px 0;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #777777;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Hello, <span th:text="${name}">Name</span>!</h2>
+    <p>Thank you for getting in touch with us. We’ve received your message and will get back to you shortly.</p>
+
+    <p><strong>Your message:</strong></p>
+    <blockquote th:text="${message}">Your message will appear here.</blockquote>
+
+    <p><strong>Submitted on:</strong> <span th:text="${time}">Time</span></p>
+
+    <div class="footer">
+        <p>This is an automated confirmation. Please do not reply to this email.</p>
+    </div>
+</div>
+</body>
+</html>
