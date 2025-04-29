@@ -11,6 +11,6 @@ public class SechuleService {
 
     @Scheduled(cron = "0 0 9 * * *")
     public void sendDailyMail() {
-        emailService.sendDailyEmail();
+        emailService.sendDailyEmail("ombade365@gmail.com");
     }
 }

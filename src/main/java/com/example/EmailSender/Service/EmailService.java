@@ -48,9 +48,9 @@ public class EmailService {
 
   }
 
-    public void sendDailyEmail() {
+    public void sendDailyEmail(String mail) {
         SimpleMailMessage message = new SimpleMailMessage();
-        message.setTo("recipient@example.com"); // can be dynamic
+        message.setTo("recipient@example.com");
         message.setSubject("Daily Scheduled Email");
         message.setText("This is your daily email sent at 9 AM.");
         mailSender.send(message);
